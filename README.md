@@ -8,6 +8,10 @@ This repository contains the official implementation of PaLoRA (Pareto Low-Rank 
 
 The paper is available at: [OpenReview](https://openreview.net/forum?id=icDoYdUhRa)
 
+## Related work
+
+PaLoRA continues [PaMaL (Pareto Manifold Learning)](https://github.com/nik-dim/pamal), our preceding work on learning Pareto manifolds through ensembles of single-task models.
+
 
 ## Running experiments
 
@@ -122,14 +126,27 @@ configs
         └── wandb.yaml
 ```
 
+## MultiMNIST data and reproducibility
+
+The MultiMNIST results can depend on the randomness used when generating the dataset. The experiments reported in the paper used a single dataset generated at the beginning of the project and kept fixed throughout. To reproduce the reported setup, download that dataset from [Google Drive](https://drive.google.com/drive/folders/1j21U_rWp99VI0HAo1la7qwvdW3yMZtjE?usp=sharing) and configure the experiment to use its location.
+
 
 
 
 ## Citation
 
-If you find our work useful, please consider citing our paper:
+If you find this code or the PaMaL/PaLoRA line of work useful, please cite both papers:
 
 ```bibtex
+@inproceedings{
+  dimitriadis2023pareto,
+  title={Pareto Manifold Learning: Tackling multiple tasks via ensembles of single-task models},
+  author={Dimitriadis, Nikolaos and Frossard, Pascal and Fleuret, Fran{\c{c}}ois},
+  booktitle={International Conference on Machine Learning},
+  year={2023},
+  url={https://arxiv.org/abs/2210.09759}
+}
+
 @inproceedings{
   dimitriadis2025pareto,
   title={Pareto Low-Rank Adapters: Efficient Multi-Task Learning with Preferences},
